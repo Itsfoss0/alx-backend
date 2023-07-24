@@ -8,9 +8,7 @@ API pagination
 
 import csv
 import math
-from typing import List
-
-index_range = __import__("0-simple_helper_function.py").index_range
+from typing import List, Tuple
 
 
 class Server:
@@ -35,6 +33,20 @@ class Server:
             self.__dataset = dataset[1:]
 
         return self.__dataset
+
+    @staticmethod
+    def index_range(page: int, page_size: int) -> Tuple[int, int]:
+        """
+        The Actuall helper function
+        Args:
+            page (int):
+            page_size (int):
+        Returns:
+            Returns an tupple of ints
+        """
+        if isinstance(page, int) and isinstance(page_size, int):
+            return ((page - 1) * page_size, page_size * page)
+        raise TypeError('Expected `page` and `page_size` to be ints')
 
     def get_page(self, page: int = 1, page_size: int = 10) -> List[List]:
         """
