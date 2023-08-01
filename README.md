@@ -10,3 +10,6 @@ Backend engineering is a specialized area of software development that focuses o
 [0x00](0x00-pagination): Introduction to pagination in APIs
 
 [0x01](0x01-caching): Caching
+
+[0x02](0x02-i18n): I18N
+
