@@ -1,0 +1,4 @@
+Flask==2.0.1
+flask_babel==2.0.0
+Flask-HTTPAuth==3.2.4
+Flask-RESTful==0.3.8
